@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Тестування</title>
+  <style>
+    .result {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Тестування таблиці істинності</h1>
+
+  <form id="testForm">
+    <label for="input1">Значення 1:</label>
+    <input type="checkbox" id="input1">
+
+    <label for="input2">Значення 2:</label>
+    <input type="checkbox" id="input2">
+
+    <button type="button" onclick="runTest()">Перевірити</button>
+  </form>
+
+  <p id="result" class="result"></p>
+
+  <script>
+    function runTest() {
+  var input1 = document.getElementById("input1").checked;
+  var input2 = document.getElementById("input2").checked;
+
+  var result = input1 && input2; // Логічна операція "І"
+
+  var resultElement = document.getElementById("result");
+  resultElement.innerHTML = "Результат: " + result;
+}
+
+  </script>
+</body>
+</html>
